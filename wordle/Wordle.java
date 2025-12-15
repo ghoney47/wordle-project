@@ -405,7 +405,7 @@ public class Wordle {
         }
 
         for (String l : ALLLETTERS){
-            gw.setKeyColor(l, WordleGWindow.MISSING_COLOR);
+            gw.setKeyColor(l.toUpperCase(), WordleCanvas.UNKNOWN_COLOR);
         }
         
     }
