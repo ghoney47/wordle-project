@@ -10,6 +10,9 @@ public class Wordle {
 
 /* Private instance variables */
 
+    //used for key coloring (in reset)
+    private static final String[] ALLLETTERS = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+
     //used for key coloring helper method
     public static final int CORRECT = 1;
     public static final int PRESENT = 0;
@@ -400,6 +403,11 @@ public class Wordle {
         for (int i = 0; i < WordleGWindow.N_ROWS; i++){
             gw.setCurrentRow(i);
         }
+
+        for (String l : ALLLETTERS){
+            gw.setKeyColor(l, WordleGWindow.MISSING_COLOR);
+        }
+        
     }
 
 
